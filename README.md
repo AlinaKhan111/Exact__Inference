@@ -1,1 +1,2 @@
-# Exact__Inference
+# Traffic Congestion Prediction Using Bayesian Network - Exact Inference
+This project provides a Bayesian Network model implemented in Python to predict traffic congestion based on factors like weather, time of day, traffic light state, and accident occurrence. Using the pgmpy library, this notebook (exact__inference) demonstrates constructing the network, defining conditional probability distributions (CPDs), and performing exact inference to predict traffic conditions.
