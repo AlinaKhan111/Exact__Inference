@@ -10,8 +10,44 @@ The notebook exact__inference.ipynb contains the complete code for building the 
 ## Prerequisites
 Python 3.7 or higher
 Jupyter Notebook or JupyterLab
+
 # Install Dependencies
 To set up the required Python packages, run:
-'''bash
+```bash
 pip install pgmpy
-'''
+```
+
+# Project Overview
+This project defines a Bayesian Network with nodes representing different factors influencing traffic congestion and uses exact inference to analyze these influences. This can be useful in real-time traffic management scenarios or as a part of a larger traffic analysis system.
+
+# Model Details
+The Bayesian Network model consists of the following variables:
+
+Weather: Indicates if the weather is clear or rainy.
+TimeOfDay: Differentiates between off-peak and peak hours.
+Accident: Represents the occurrence of an accident.
+TrafficLightState: Indicates traffic light state, influenced by the time of day.
+TrafficCongestion: The target variable, representing the traffic congestion status.
+
+## Model Structure
+The network’s relationships:
+
+Weather, TimeOfDay, Accident, and TrafficLightState influence TrafficCongestion.
+TrafficLightState is influenced by TimeOfDay.
+
+## CPDs (Conditional Probability Distributions)
+Each variable is assigned a probability distribution:
+
+Weather: Probability of clear or rainy weather.
+TimeOfDay: Probability of off-peak or peak time.
+Accident: Probability of accident occurrence.
+TrafficLightState: Probability of traffic light state depending on TimeOfDay.
+TrafficCongestion: Probability of traffic congestion based on Weather, TimeOfDay, Accident, and TrafficLightState.
+
+The network allows for exact inference on TrafficCongestion given certain evidence, enabling us to estimate traffic congestion probability under specific conditions.
+
+# Dependencies
+This project requires the pgmpy library. Install it via:
+```python
+pip install pgmpy
+```
