@@ -55,8 +55,4 @@ TrafficCongestion: Probability of traffic congestion based on Weather, TimeOfDay
 
 The network allows for exact inference on TrafficCongestion given certain evidence, enabling us to estimate traffic congestion probability under specific conditions.
 
-# Dependencies
-This project requires the pgmpy library. Install it via:
-```python
-pip install pgmpy
-```
+
